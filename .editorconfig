@@ -1,0 +1,33 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+# `tab_width` inherits `indent_size`
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# `max_line_length` is only supported by some editors, so enforce it with tools
+# like Prettier instead
+
+[*.css]
+indent_size = 2
+indent_style = space
+
+[*.html]
+indent_size = 2
+indent_style = space
+
+[*.js]
+indent_size = 2
+indent_style = space
+
+[*.json, *.json5, *.jsonc]
+indent_size = 2
+indent_style = space
+
+[*.md]
+indent_size = 2
+indent_style = space

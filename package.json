@@ -1,0 +1,47 @@
+{
+  "name": "discordatron",
+  "description": "A Discord bot using Node.js",
+  "homepage": "https://github.com/nhancox/discordatron",
+  "bugs": {
+    "url": "https://github.com/nhancox/discordatron/issues"
+  },
+  "license": "GPL-3.0-only",
+  "author": {
+    "name": "Nicholas Hancox",
+    "url": "https://www.nicholashancox.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nhancox/discordatron.git"
+  },
+  "scripts": {
+    "lint:eslint": "eslint --fix",
+    "lint:markdown": "markdownlint",
+    "lint:prettier": "prettier --loglevel silent --write",
+    "lint:all": "run-s lint:all:eslint lint:all:prettier lint:all:markdown",
+    "lint:all:eslint": "npm run lint:eslint -- . --ext .js",
+    "lint:all:markdown": "npm run lint:markdown -- \"**/*.md\" --ignore node_modules",
+    "lint:all:prettier": "npm run lint:prettier -- \"**/*.{css,html,json,json5,jsonc,md}\"",
+    "start": "node main.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.3.2",
+    "discord.js": "^12.2.0",
+    "ffmpeg-static": "^4.2.4",
+    "ytdl-core-discord": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
+    "markdownlint-cli": "^0.22.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1"
+  }
+}

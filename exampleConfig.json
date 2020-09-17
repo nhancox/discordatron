@@ -1,0 +1,5 @@
+{
+  "name": "Discordatron",
+  "prefix": "!",
+  "token": "discord-api-token-goes-here"
+}
