@@ -34,7 +34,6 @@ channels. Includes queue and loop functionality.
 
 ## Planned Updates
 
-- Remove extra whitespace from submitted commands
 - Command to remove songs from queue
 - Command to show the currently playing song without displaying the entire queue
 - Integrate Docker for easy hosting

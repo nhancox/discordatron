@@ -19,8 +19,13 @@ const config = require("./lib/config.js");
       return;
     }
 
-    const command = message.content
-      .split(" ")[0]
+    message.sanitizedContent = message.content
+      .split(/\s/u)
+      .filter((element) => {
+        return element.length && !/\s/u.test(element);
+      });
+
+    const command = message.sanitizedContent[0]
       .substring(config.get("prefix").length)
       .toLowerCase();
 
